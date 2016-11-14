@@ -13,7 +13,7 @@ import requests
 import json
 
 genres = {"Romance": 6, "Comedy": 4, "Fantasy":4, "Drama": 3, "Action": 3,"Sci-Fi":3, "Horror":0, "Thriller": 1, "Animation":2,"Family":1,"Adventure":4}
-MPAA = {"NC-17":20, "R":15,"PG-13":10,"PG":5,"G":1,"N/A":1,"TV-14":10,"NOT RATED":20}
+MPAA = {"NC-17":20, 'TV-MA':20,"R":15,"PG-13":10,"PG":5,"G":1,"N/A":1,"TV-14":10,"NOT RATED":20}
 
 class Movie:
     def  __init__(self, title, genre, MPAAR, IMDBR, RTR ):
