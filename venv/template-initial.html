@@ -1,0 +1,22 @@
+<div>
+
+<p>Hi Troy</p>
+    <input/>
+    <button onclick="getinputval()">x</button>
+	<script>
+
+	    function getinputval() {
+
+	    	var inputAttribute = document.querySelector('input');
+	    	var val = inputAttribute.value;
+
+
+	    	fetch('http://127.0.0.1:5000/some-url?userSelectedThis='+val)
+	    	  .then(function(res){ return res.json(); })
+	    	  .then(function(json){ console.log(json); })
+
+	    	 document.getElementById("parent").value = url("templates-results.html");
+	    }
+</script>
+
+<div>
