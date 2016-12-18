@@ -1,34 +1,37 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="en" ng-app="nchill" ng-controller="searchlist">
 <head>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />		<script src="bower_components/angular/angular.js"></script>
+	<script src="app.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="static/style.css?v=398520" />
+	
+	<link rel="stylesheet" href="css/animate.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css">
+    
 	<meta charset="utf-8">
 	<title>AND CHILL</title>
 
+</head>
+
+<body>
+    <div class="animated zoomInRight">
+	    
+    <div class="input-group search-bar">
+	    
+      <input type="text" ng-model="search" ng-model-options="{ debounce: 800 }" onclick="select()" class="form-control" placeholder="is your flick going to get you laid?" autofocus />
+      
+      <span class="input-group-addon bar-style"><i class="glyphicon glyphicon-search"></i></span>
+    </div>
+    
+	<div id="movieinfo" ng-include="'movieinfo.html'" class="col-md-8"></div>
+	
+    </div>
 	
 
-</head>
-<body>
-	<form class="form-1" action="some-url">
-		<input id="movie" type="text" placeholder="is your flick going to get you laid?" name="userSelectedThis" class="hvr-wobble-vertical"/>
-		<!-- <input type="submit" style="display: none" onsubmit="getinputval()"/> -->
-	    <!-- <button onclick="getinputval()">x</button> -->
-		<script>/*
-		    function (ev) {
-		    	ev.preventDefault();
-		    	ev.stopPropagation();
-		    	var inputAttribute = document.getElementById("movie");
-		    	var val = inputAttribute.value;
-
-		    	console.log(val);
-
-		    	fetch('http://127.0.0.1:5000/some-url?userSelectedThis='+val)
-		    	  .then(function(res){ return res.json();})
-		    	  .then(function(json){console.log(json);})
-		    };*/	
-		</script>
 	</form>
-<body>
+	
+    
+</body>
 </html>
